@@ -6,7 +6,7 @@ import React, { Component } from "react"
 class InputTodo extends Component {
   state = {
     title: "",
-    dueDate: ""
+    dueDate: "2022-10-01"
   };
 
   onChange = e => {
@@ -21,7 +21,7 @@ class InputTodo extends Component {
       this.props.addTodoProps(this.state.title, this.state.dueDate)
       this.setState({
         title: "",
-        dueDate: ""
+        dueDate: "2022-10-01"
       })
     } else {
       alert("Please write item")
@@ -30,10 +30,10 @@ class InputTodo extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Add Todo..." name="title" value={this.state.title} onChange={this.onChange}/>
+      <form onSubmit={this.handleSubmit} className="form-container">
+        <input type="text" className="input-text" placeholder="Add Todo..." name="title" value={this.state.title} onChange={this.onChange}/>
         <input type="date" name="dueDate" value={this.state.dueDate} onChange={this.onChange}/>
-        <button>Submit</button>
+        <button className="input-submit">Submit</button>
       </form>
     )
   }
