@@ -11,21 +11,22 @@ class TodoItem extends React.Component {
             textDecoration: "line-through",
           }
 
-        return <li key={this.props.todo.id} className={styles.item}>
-                
+          const { completed, id, title , dueDate} = this.props.todo
+        return <li key={id} className={styles.item}>
                 <input type="checkbox" 
                     className={styles.checkbox}
                     name="isChecked" 
-                    checked={this.props.todo.completed} 
-                    onChange={() => this.props.handleChangeProps(this.props.todo.id)} 
+                    checked={completed} 
+                    onChange={() => this.props.handleChangeProps(id)} 
                 />
-                <span style={this.props.todo.completed ? completedStyle : null}>
-                    {this.props.todo.title}
-                </span>{" "}
-                <span className={styles.dueDate}>
-                    {this.props.todo.dueDate}
+                <span style={completed ? completedStyle : null}>
+                    {title}
                 </span>
-                <button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}>Delete</button>
+                {" "}
+                <span className={styles.dueDate}>
+                    {dueDate}
+                </span>
+                <button onClick={() => this.props.deleteTodoProps(id)}>Delete</button>
             </li>
     }
 }
