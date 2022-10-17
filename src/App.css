@@ -58,8 +58,15 @@
   }
   
   .input-text,
-  .input-submit {
+  .input-submit,
+  .input-date {
     height: 45px;
     outline: none;
     border: none;
+  }
+
+  .input-date {
+    padding-right: 25px;
+    text-align: center;
+    width: 13em;
   }
