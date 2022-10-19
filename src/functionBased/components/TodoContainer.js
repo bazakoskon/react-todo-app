@@ -64,18 +64,22 @@ const TodoContainer = () => {
   }, [todos])
 
   return (
-    <div className="container">
-      <div className="inner">
-        <Header />
-        <InputTodo addTodoProps={addTodoItem} />
-        <TodosList
-          todos={todos}
-          handleChangeProps={handleChange}
-          deleteTodoProps={delTodo}
-          setUpdate={setUpdate}
-        />
+    
+      <div className="container">
+        <div className="inner">
+        {/* <Route path="/"> */}
+          <Header />
+          <InputTodo addTodoProps={addTodoItem} />
+          <TodosList
+            todos={todos}
+            handleChangeProps={handleChange}
+            deleteTodoProps={delTodo}
+            setUpdate={setUpdate}
+          />
+          {/* </Route> */}
+        </div>
       </div>
-    </div>
+    
   )
 }
 
