@@ -70,3 +70,15 @@
     text-align: center;
     width: 13em;
   }
+
+  .input-submit svg {
+    color: darkcyan;
+    font-size: 25px;
+    margin-top: 2px;
+  }
+
+  button svg {
+    color: darkcyan;
+    font-size: 22px;
+    margin-top: 2px;
+  }
