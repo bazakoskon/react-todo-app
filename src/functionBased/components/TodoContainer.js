@@ -50,16 +50,6 @@ const TodoContainer = () => {
     )
   }
 
-  // useEffect(() => {
-  //   // getting stored items
-  //   const temp = localStorage.getItem("todos")
-  //   const loadedTodos = JSON.parse(temp)
-
-  //   if (loadedTodos) {
-  //     setTodos(loadedTodos)
-  //   }
-  // }, [setTodos])
-
   function getInitialTodos() {
     // getting stored items
     const temp = localStorage.getItem("todos")
