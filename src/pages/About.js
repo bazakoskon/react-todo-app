@@ -1,17 +1,22 @@
 import React from "react"
+import { NavLink, Routes, Route,  } from "react-router-dom"
+import SinglePage from "./SinglePage"
 
-export default function About() {
+const About = (props) => {
     return <div>
         <ul>
             <li>
-                {<h1>About!</h1>/* <Link to="about-app">About App</Link> */}
+                <NavLink to="/about-app">About App</NavLink>
             </li>
             <li>
-                <h3>About text</h3>{/* <Link to="about-author">About Author</Link> */}
+            <NavLink to="/about-author">About Author</NavLink>
+                {/* <NavLink to={`${url}/about-author`}>About Author</NavLink> */}
             </li>
         </ul>
         {/* <Routes>
-            <Route path=":slug" element={<SinglePage/>}/>
+            <Route path={`${path}/:slug`} element={<SinglePage/>}/>
         </Routes> */}
     </div>
 }
+
+export default About
