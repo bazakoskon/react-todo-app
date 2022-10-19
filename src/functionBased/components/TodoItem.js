@@ -44,7 +44,7 @@ const TodoItem = props => {
                 <input 
                     type="checkbox"
                     className={styles.checkbox}
-                    // name="isChecked"
+                    name="isChecked"
                     checked={completed}
                     onChange={() => props.handleChangeProps(id)}
                 />
@@ -57,9 +57,7 @@ const TodoItem = props => {
                 style={editMode}
                 className={styles.textInput}
                 value={title}
-                onChange={e => {
-                    props.setUpdate(e.target.value, id)
-                }}
+                onChange={e => props.setUpdate(e.target.value, id)}
                 onKeyDown={handleUpdatedDone}
             />
         </li>
