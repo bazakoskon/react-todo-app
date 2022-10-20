@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import {HashRouter as Router, BrowserRouter, Routes, Route } from "react-router-dom"
 import About from './pages/About'
 import NotMatch from './pages/NotMatch'
 import TodoContainer from "./functionBased/components/TodoContainer"
@@ -13,7 +13,7 @@ import TodoItemPage from "./functionBased/components/TodoItemPage"
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<TodoContainer />} />
@@ -24,7 +24,7 @@ ReactDOM.render(
         <Route path="/todo-item/:id" element={<TodoItemPage />} />
         <Route path="*" element={<NotMatch />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 )
