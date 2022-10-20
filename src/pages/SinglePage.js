@@ -1,6 +1,7 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 
+
 const aboutData = [
     {
         slug: "about-app",
@@ -18,7 +19,16 @@ const aboutData = [
 
 const SinglePage = () => {
     const { slug } = useParams()
+    // console.log(slug)
     const aboutContent = aboutData.find(item => item.slug === slug)
+    if (!aboutContent) {
+        return (
+            <div>
+            <h1>404</h1>
+            <p>{slug} is not found! :(</p>
+          </div>
+        )
+    }
     const { title, description } = aboutContent
     return (
         <div>

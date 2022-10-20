@@ -12,26 +12,6 @@ const links = [
         text: "About",
     },
 ]
-// const Navbar = () => {
-
-
-//     return (
-//         <nav className="navBar">
-//             <ul>
-//                 {links.map(link => {
-//                     return (
-//                         <li key={link.id}>
-//                             <NavLink to={link.path} activeClassName="active-link" exact>
-//                                 {link.text}
-//                             </NavLink>
-//                         </li>
-//                     )
-//                 })}
-//             </ul>
-//         </nav>
-//     )
-// }
-// export default Navbar
 
 export default function Navbar() {
     return <>

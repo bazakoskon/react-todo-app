@@ -1,7 +1,7 @@
-import React, { useState, useEffect  } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./TodoItem.module.css"
 import { FaTrash } from "react-icons/fa"
-
+import { Link } from "react-router-dom"
 const TodoItem = props => {
     const [editing, setEditing] = useState(false)
 
@@ -35,14 +35,14 @@ const TodoItem = props => {
 
     useEffect(() => {
         return () => {
-          console.log("Cleaning up...")
+            console.log("Cleaning up...")
         }
-      }, [])
+    }, [])
 
     return (
         <li key={id} className={styles.item}>
             <div onDoubleClick={handleEditing} style={viewMode}>
-                <input 
+                <input
                     type="checkbox"
                     className={styles.checkbox}
                     name="isChecked"
@@ -53,8 +53,8 @@ const TodoItem = props => {
                     <FaTrash />
                 </button>
                 <span style={completed ? completedStyle : null}>
-                    {title}
-                </span>                
+                <Link to={`/todo-item/${id}`}>{title}</Link>{/* {title} */}
+                </span>
             </div>
             <input type="text"
                 style={editMode}
